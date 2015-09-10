@@ -56,13 +56,19 @@ namespace ExIni
         /// </summary>
         /// <param name="key">Key Name</param>
         /// <param name="value">Key Value</param>
-        public IniKey(string key, string value = null)
+        public IniKey(string key, string value)
         {
             Key = key;
             Value = value;
 
             _comments = new IniComment();
         }
+
+        /// <summary>
+        ///     Creates a new <see cref="IniKey" />
+        /// </summary>
+        /// <param name="key">Key Name</param>
+        public IniKey(string key) : this(key, null) {}
         #endregion
 
         #region Public Methods
